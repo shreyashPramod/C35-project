@@ -44,11 +44,11 @@ function setup() {
   dog.scale=0.15;
 
   feed=createButton("Feed the dog");
-  feed.position(700,90);
+  feed.position(600,90);
   feed.mousePressed(feedDog);
 
   addFood=createButton("Add Food");
-  addFood.position(800,95);
+  addFood.position(700,90);
   addFood.mousePressed(addFoods);
 
   foodStock=database.ref('Food');
@@ -66,15 +66,15 @@ function draw() {
 fill(255,255,254);
 textSize(15);
 if(lastFed>=12){
-  text("Last Feed : "+ lastFed%12 + "PM",350,30);
+  text("Last Feed : "+ lastFed%12 + "PM",200,30);
 }
 
 else if(lastFed==0){
-  text("Last Feed : 12 AM",350,30);
+  text("Last Feed : 12 AM",200,30);
 }
 
 else{
-  text("Last Feed : "+lastFed + "AM",350,30);
+  text("Last Feed : "+lastFed + "AM",200,30);
 }
   dog.display();
 
